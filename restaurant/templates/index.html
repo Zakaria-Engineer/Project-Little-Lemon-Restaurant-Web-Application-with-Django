@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <article id="hero">
+      <h1 class="heading_shadow">SPECIAL OFFER</h1>
+      <p>
+        Enjoy an incredible 50% Off <br> This Weekend 
+      </p>
+      <a href="#" class="cta"> Book your table now </a>
+    </article>
+</section>
+<section>
+    <article>
+      <h2>Our New Menu</h2>
+      <img src="{% static 'img/grill.jpg' %}"width="360">
+      <p>
+        Our thoughtfully crafted menu showcases a delightful array of 12 to 15 seasonal dishes, each one inspired by the rich and diverse culinary traditions of Italian, Greek, and Turkish cultures, promising a memorable dining experience with every bite.
+      </p>
+      <p>
+        <a href="{% url 'menu' %}">Explore our new menu</a>
+      </p>
+    </article>
+    <article>
+      <h2>Book a Table</h2>
+      <img src="{% static 'img/Salade.jpg' %}"width="360">
+      <p>
+        We warmly invite you to reserve your table today and indulge in a remarkable dining experience that highlights the exquisite and varied flavors of Italian, Greek, and Turkish cuisines, all meticulously prepared to delight our cherished guests.
+      </p>
+      <p>
+        <a href="{% url 'book' %}">Secure your table now</a>
+      </p>
+    </article>
+    <article>
+      <h2>Opening Hours</h2>
+      <img src="{% static 'img/chef1.jpg' %}" width="360"> 
+      <p>
+        The Little Lemon Restaurant welcomes you every day of the week, except for public holidays, ensuring that you can enjoy our culinary delights whenever you desire. 
+      </p>
+      <ul>
+        <li>Mon - Fri: 2pm - 10pm</li>
+        <li>Sat: 2pm - 11pm</li>
+        <li>Sun: 2pm - 9pm</li>
+      </ul>
+    </article>
+</section>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Little Lemon Restaurant @Zakaria-Engineer</title>
+    <meta name="description" content="A brief description" />
+    <meta
+      name="author"
+      content="  At Little Lemon, we pride ourselves on offering an exceptional dining experience that combines vibrant flavors with a welcoming atmosphere. Our menu features a delightful array of dishes that highlight fresh ingredients and innovative lemon-infused recipes, designed to tantalize your taste buds. We are committed to providing our guests with the highest quality of service, ensuring that each visit is memorable. Our team is dedicated to creating an inviting environment, where you can relax and enjoy a meal with friends or family."
+    />
+
+    <!-- Load favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'img/favicon.ico' %}"
+    />
+
+    <!-- Include your CSS files here -->
+    <link
+      rel="preload"
+      as="style"
+      href="{% static 'css/style.css' %}"
+      onload="this.rel = 'stylesheet'"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--Header content-->
+    {% include 'partials/_header.html' %}
+
+    <main>{% block content %} {% endblock %}</main>
+
+    <!--Footer content-->
+    <!-- Replace this comment with your code  -->
+    {% include 'partials/_footer.html' %}
+  </body>
+</html>
